@@ -4,6 +4,18 @@
 
 Includes syntax highlighting, outline, indentation, and optional LSP support via [Cyright](https://github.com/ktnrg45/cyright).
 
+## Prebuilt ZIP
+
+For a no-Rust/no-npm install, use a prebuilt ZIP:
+
+```sh
+unzip zed-cython-cyright-*.zip
+cd zed-cython-cyright-*
+./install_macos.sh
+```
+
+Restart Zed and open a `.pyx`, `.pxd`, or `.pxi` file. The bundle includes Cyright and runs it through Zed's Node runtime.
+
 ## Cyright LSP
 
 Build Cyright from the VS Code extension repository:
@@ -54,6 +66,16 @@ If the server does not start automatically, enable it for Cython explicitly:
   }
 }
 ```
+
+## Build ZIP
+
+For maintainers:
+
+```sh
+CYRIGHT_DIR=/absolute/path/to/vs-code-cython/cyright ./scripts/build_distributable.sh
+```
+
+The script expects Cyright to be built with `npm run build:cli:dev`.
 
 ## Development
 
