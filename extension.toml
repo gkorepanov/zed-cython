@@ -9,3 +9,10 @@ repository = "https://github.com/lgeiger/zed-cython"
 [grammars.cython]
 repository = "https://github.com/b0o/tree-sitter-cython"
 commit = "62f44f5e7e41dde03c5f0a05f035e293bcf2bcf8"
+
+[language_servers.cyright]
+name = "Cyright"
+languages = ["Cython"]
+
+[language_servers.cyright.language_ids]
+Cython = "cython"
